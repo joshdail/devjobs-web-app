@@ -1,0 +1,107 @@
+# Frontend Mentor - Devjobs web app solution
+
+This is a solution to the [Devjobs web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position
+- Be able to click a job from the index page so that they can read more information and apply for the job
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Desktop-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Vite](https://vitejs.dev/)
+
+### What I learned
+
+I had quite a bit of difficulty trying to set up Vite using npm. Even following the instructions step by step, the project would not run. I was able to set up the project without hassle using [Yarn](https://yarnpkg.com/) instead. Quite a few times I have tried setting up a framework with npm, following the exact step-by-step instructions, but the project will not run.
+
+One of the challenging aspects of this project was the custom list item markers. After trying to work with the li::marker attribute, I ended up finding it better to just get rid of the marker altogether and use custom pseudo-classes instead:
+
+```
+ol,
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ol {
+  counter-reset: count;
+}
+
+li {
+  position: relative;
+}
+
+li::before {
+  color: var(--clr-violet);
+  font-weight: var(--fw-bold);
+  position: absolute;
+  left: 0;
+}
+
+ul li::before {
+  content: "\2022";
+}
+
+ol li {
+  counter-increment: count;
+}
+
+ol li::before {
+  content: counter(count) "";
+}
+
+li {
+  padding-left: 2.75rem;
+}
+```
+
+
+### Continued development
+
+One future goal is developing a better system for organizing styles and stylesheets. Also, continuing to improve my understanding of React.
+
+### Useful resources
+
+- [MDN Documentation on matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) - This was useful for checking prefers-color-scheme in my JS Code. The toggle and the initial state for the display mode are set to light or dark based on whether a preference for dark mode is specified by the system
+
+## Author
+
+- Github - [joshdail](https://github.com/joshdail)
+- Frontend Mentor - [@joshdail](https://www.frontendmentor.io/profile/joshdail)

@@ -3,11 +3,15 @@ import React, { useState, useEffect } from "react"
 export default function DisplayToggle() {
   const body = document.querySelector("body")
   useEffect(() => {
+    const defaultMode = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light"
     body.dataset.display =
-      sessionStorage.getItem("devjobs_display_mode") || "dark"
+      sessionStorage.getItem("devjobs_display_mode") || defaultMode
   }, [])
 
-  const [displayMode, setDisplayMode] = useState(body.dataset.display || "dark")
+  const [displayMode, setDisplayMode] = useState(body.dataset.display)
 
   function handleClick(e) {
     e.preventDefault()
