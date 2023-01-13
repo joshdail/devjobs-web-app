@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/joshdail/devjobs-web-app](https://github.com/joshdail/devjobs-web-app)
+- Live Site on Netlify: [Click here to open](https://unique-froyo-f20fdf.netlify.app/)
 
 ## My process
 
@@ -93,7 +93,6 @@ li {
   padding-left: 2.75rem;
 }
 ```
-
 
 Finally, getting the static assets to work with Vite. This was one of the last and most difficult hurdles. Vite requires that urls for static files be treated as imports. For production, I needed to go through and make sure the images urls were imported and then used as variables, not placed directly in the img tags. Also, for the json data, I had to move the json data and logo image assets into the public directory and adjust the urls in the json file accordingly.
 
