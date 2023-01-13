@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import sunUrl from "../assets/desktop/icon-sun.svg"
+import moonUrl from "../assets/desktop/icon-moon.svg"
 
 export default function DisplayToggle() {
   const body = document.querySelector("body")
@@ -26,7 +28,7 @@ export default function DisplayToggle() {
 
   return (
     <div className="display-toggle">
-      <img src="src/assets/desktop/icon-sun.svg" alt="light mode" />
+      <img src={sunUrl} alt="light mode" />
       <button
         type="button"
         className="btn-display-switch"
@@ -39,7 +41,7 @@ export default function DisplayToggle() {
             : "Switch to dark mode"
         }
       />
-      <img src="src/assets/desktop/icon-moon.svg" alt="dark mode" />
+      <img src={moonUrl} alt="dark mode" />
     </div>
   )
 }

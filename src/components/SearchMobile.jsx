@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react"
+import filterUrl from "../assets/mobile/icon-filter.svg"
+import magnifierUrl from "../assets/desktop/icon-search.svg"
+import locationUrl from "../assets/desktop/icon-location.svg"
 
 export default function SearchMobile(props) {
   const [query, setQuery] = useState({
@@ -42,11 +45,7 @@ export default function SearchMobile(props) {
         onChange={handleChange}
       />
       <span></span>
-      <img
-        className="img-filter-icon"
-        src="src/assets/mobile/icon-filter.svg"
-        alt="filter icon"
-      />
+      <img className="img-filter-icon" src={filterUrl} alt="filter icon" />
       <button
         type="button"
         class="btn btn-square"
@@ -55,17 +54,14 @@ export default function SearchMobile(props) {
       >
         <img
           className="img-mobile-btn"
-          src="src/assets/desktop/icon-search.svg"
+          src={magnifierUrl}
           alt="magnifying glass"
         />
       </button>
       <div className={modalActive ? "modal-wrapper" : "modal-wrapper hidden"}>
         <div className={"modal"}>
           <div className="search-modal-container">
-            <img
-              className="img-search img-location"
-              src="src/assets/desktop/icon-location.svg"
-            />
+            <img className="img-search img-location" src={locationUrl} />
             <input
               type="text"
               className="input input-location"

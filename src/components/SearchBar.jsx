@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import magnifierUrl from "../assets/desktop/icon-search.svg"
+import locationUrl from "../assets/desktop/icon-location.svg"
 
 export default function SearchBar(props) {
   const [query, setQuery] = useState({
@@ -26,10 +28,7 @@ export default function SearchBar(props) {
   return (
     <div className="search-bar width-default">
       <div className="search-input-container search-job">
-        <img
-          className="img-search img-magnifier"
-          src="src/assets/desktop/icon-search.svg"
-        />
+        <img className="img-search img-magnifier" src={magnifierUrl} />
         <input
           type="text"
           className="input input-job"
@@ -42,10 +41,7 @@ export default function SearchBar(props) {
         <span></span>
       </div>
       <div className="search-input-container search-location">
-        <img
-          className="img-search img-location"
-          src="src/assets/desktop/icon-location.svg"
-        />
+        <img className="img-search img-location" src={locationUrl} />
         <input
           type="text"
           className="input input-location"

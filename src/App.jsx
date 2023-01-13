@@ -10,7 +10,7 @@ function App() {
   const [detail, setDetail] = useState({})
 
   useEffect(() => {
-    fetch("src/data.json", { mode: "no-cors" })
+    fetch("/data.json", { mode: "no-cors" })
       .then(res => res.json())
       .then(jsonArray => {
         const filteredArray = jsonArray.slice(0, limit)

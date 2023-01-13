@@ -14,7 +14,7 @@ export default function Card(props) {
       >
         <img
           className="company-logo-img"
-          src={`src/${props.data.logo}`}
+          src={`/${props.data.logo}`}
           alt={`${props.data.company} company logo`}
         />
       </div>

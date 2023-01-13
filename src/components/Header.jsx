@@ -1,6 +1,8 @@
 import React from "react"
 import DisplayToggle from "./DisplayToggle"
 
+import logoUrl from "../assets/desktop/logo.svg"
+
 export default function Header(props) {
   function handleClick(e) {
     e.preventDefault()
@@ -19,11 +21,7 @@ export default function Header(props) {
           className="btn-return-home"
           onClick={e => handleClick(e)}
         >
-          <img
-            className="logo"
-            src="src/assets/desktop/logo.svg"
-            alt="Devjobs logo"
-          />
+          <img className="logo" src={logoUrl} alt="Devjobs logo" />
         </button>
         <DisplayToggle />
       </div>

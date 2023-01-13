@@ -9,7 +9,7 @@ export default function DetailBanner(props) {
       >
         <img
           className="banner-logo-img"
-          src={`src/${props.data.logo}`}
+          src={`/${props.data.logo}`}
           alt={`${props.data.company} company logo`}
         />
       </div>

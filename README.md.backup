@@ -95,7 +95,7 @@ li {
 ```
 
 
-Finally, getting the static assets to work with Vite. This was one of the last and most difficult hurdles. Vite requires that urls for static files be treated as imports. For production, I needed to go through and make sure the images urls were imported and then used as variables, not placed directly in the img tags. Also, for the json data, I had to move the json data and logo image assets into the public directory and adjust the urls in the json file accordingly.
+Finally, getting the static assets to work with Vite. This was one of the last and most difficult hurdles. Vite requires that urls for static files be treated as imports. For production, I needed to go through and make sure the images urls were imported and then used as variables, not placed directly in the img tags. Also, for the json data, I had to move the 
 
 ### Continued development
 
