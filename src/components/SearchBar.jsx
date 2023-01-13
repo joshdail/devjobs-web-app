@@ -28,7 +28,11 @@ export default function SearchBar(props) {
   return (
     <div className="search-bar width-default">
       <div className="search-input-container search-job">
-        <img className="img-search img-magnifier" src={magnifierUrl} />
+        <img
+          className="img-search img-magnifier"
+          src={magnifierUrl}
+          alt="magnifying glass"
+        />
         <input
           type="text"
           className="input input-job"
@@ -41,7 +45,11 @@ export default function SearchBar(props) {
         <span></span>
       </div>
       <div className="search-input-container search-location">
-        <img className="img-search img-location" src={locationUrl} />
+        <img
+          className="img-search img-location"
+          src={locationUrl}
+          alt="location search"
+        />
         <input
           type="text"
           className="input input-location"
